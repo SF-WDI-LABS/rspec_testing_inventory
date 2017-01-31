@@ -1,6 +1,9 @@
 # <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60"> Testing Inventory
 
-**Objective:** Use TDD in Rails to create an inventory management application. Your goal is to write code to pass some existing tests, then write and pass tests for other features.
+**Objective:** Use TDD in Rails to create an inventory management application. Your goals are:
+
+- write code to pass some existing tests  
+- write and pass tests for other features
 
 ## Getting Started
 
@@ -11,6 +14,12 @@
 5. The primary gem you'll use for testing this app is `rspec-rails`. You'll also use `factory_girl_rails` to set up and tear down test data and `ffaker` to create realistic fake data.  Examine your `Gemfile` to make sure these gems are included.
 5. Run `rspec` in the Terminal. You should see `0 examples, 0 failures`.
 6. Create a new `my-items-intro` branch to start working on, and switch to it.
+
+
+## What's Already Been Done
+
+* Gems `rspec-rails`, `factory_girl_rails`, and `ffaker` (and a few others) are installed in the Gemfile for the `development` and `test` groups.
+* Terminal command `rails generate rspec:install` has been run, creating the `.rspec` file and the `spec` directory and its contents.
 
 ## Intro: Items TDD
 
@@ -96,7 +105,7 @@
   end
   ```
 
-* This isn't looking very DRY!  Use the `rspec-rails` [`let!`](https://www.relishapp.com/rspec/rspec-core/v/2-5/docs/helper-methods/let-and-let) helper method to assign the `item` at the beginning of the `describe #show` block:
+* This isn't looking very DRY!  Use the `rspec-rails` [`let`](https://www.relishapp.com/rspec/rspec-core/v/2-5/docs/helper-methods/let-and-let) helper method to assign the `item` at the beginning of the `describe #show` block:
 
   ```ruby
   describe "#show" do
@@ -152,7 +161,7 @@
 
 * Create skeleton (empty) methods in the items controller for the `new` and `create` actions.
 
-* Make a new block in the items controller test file (`spec/controllers/items_controller_spec.rb`) to `describe` the `#create` action.  
+* Make a new block in the items controller spec file (`spec/controllers/items_controller_spec.rb`) to `describe` the `#create` action.  
 
 * For this action, you'll test two different contexts: successful creates and validation failures. Add two `context` blocks inside the `describe #create` block.
 
@@ -288,7 +297,7 @@
   end
   ```
 
-* It can be a benefit to test with data that is more realistic, and randomized test data can help ensure you're not accidentally coding a solution that's too narrow.
+* It can be helpful to test with data that is more realistic.  Sometimes people use randomized data as well. The benefit is you might find edge cases in random data that you forgot initially.  However, be extremely careful with randomized data, as this can introduce hard to track-down intermittent test failures.
 
 * Use Factory Girl's "[lazy attributes](https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md#lazy-attributes)" and the Ruby array method [`sample`](http://ruby-doc.org/core-2.2.0/Array.html#method-i-sample) to make the factory randomly assign either `"sold"` or `"unsold"` as the status of each item it creates.
 
