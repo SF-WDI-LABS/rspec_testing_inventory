@@ -404,14 +404,14 @@ Reference the [solution-nested-items branch](../../tree/solution-nested-items) f
 
 Reference the [solution-nested-items branch](../../tree/solution-nested-items) for guidance if you get stuck during this part of the lab.
 
-####Goal: Strong params for security and prosperity!
+#### Goal: Strong params for security and prosperity!
 
 * If you haven't yet, use Rails strong parameters for your items and products controllers.
 * In your products controller, define a private `product_params` method that implements strong parameters (look this up if you need to)!  Refactor your controller actions to use the new `product_params` method.
 
 * In your items controller, define a private `item_params` method that implements strong parameters (look this up if you need to)!  Refactor your controller actions to use the new `item_params` method.
 
-####Goal: DRYify item and product lookup.
+#### Goal: Don't Repeat Yourself in item and product lookup.
 
 * Many routes in the products controller look up a product by id.  Define a private `set_product` method in the products controller that assigns the `@product` variable based on the id parameter.
 
@@ -424,7 +424,7 @@ Reference the [solution-nested-items branch](../../tree/solution-nested-items) f
 * [RSpec Rails Docs](https://github.com/rspec/rspec-rails)
 * [RSpec Controller Specs](https://www.relishapp.com/rspec/rspec-rails/docs/controller-specs)
 * [RSpec Built-In Matchers](https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers)
-* [Factory Girl Rails Docs](https://github.com/thoughtbot/factory_girl_rails" target)
+* [Factory Girl Rails Docs](https://github.com/thoughtbot/factory_girl_rails)
 * [FFaker Docs](https://github.com/ffaker/ffaker)
 * [FFaker Cheatsheet](http://ricostacruz.com/cheatsheets/ffaker.html)
 * [Rails Nested Resources](http://guides.rubyonrails.org/routing.html#nested-resources)
