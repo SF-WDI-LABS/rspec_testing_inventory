@@ -42,7 +42,7 @@
 
 * Use Rails to generate an item model.  Items will have three attributes: `color`, `size`, and `status`.  Read the Terminal output to see which files are created. Choose `y` to overwrite the factory file if there is a conflict.
 
-* Run `rspec` to confirm the tests are working. You will see "pending" tests.
+* Run `rspec` to confirm the tests are working. If they are, you will see "pending" tests. You may see an error - pause to debug it!
 
 
 #### Goal: Test the `items#show` controller action.
@@ -73,22 +73,22 @@
 
   <details>
     <summary>click for solution</summary>
-    ```ruby
-    # spec/controllers/items_controller_spec.rb
 
-    # set up controller tests for the ItemsController
-    RSpec.describe ItemsController, type: :controller do  
-      # set up tests for the show action, specifically
-      describe "#show" do  
-        # say how to test one goal of the show action
-        it "renders the :show view" do  
-          item = Item.create({size:'s', color:'blue', status:'unsold'}) # create test item
-          get :show, id: item.id  # make a get request to /items/:id
-          expect(response).to render_template(:show)  # test that response renders show view
+        # spec/controllers/items_controller_spec.rb
+
+        # set up controller tests for the ItemsController
+        RSpec.describe ItemsController, type: :controller do  
+          # set up tests for the show action, specifically
+          describe "#show" do  
+            # say how to test one goal of the show action
+            it "renders the :show view" do  
+              item = Item.create({size:'s', color:'blue', status:'unsold'}) # create test item
+              get :show, id: item.id  # make a get request to /items/:id
+              expect(response).to render_template(:show)  # test that response renders show view
+            end
+          end
         end
-      end
-    end
-    ```
+
   </details>
 
 * This test will require a `show` method in the items controller, and a `show` view for items. Add an empty `show` method to the items controller, and create an `app/views/items/show.html.erb` file if you don't have one yet.
