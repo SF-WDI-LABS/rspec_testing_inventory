@@ -9,16 +9,16 @@
 
 1. Fork this repo, and clone it into your WDI class folder on your local machine.
 2. Run `bundle install` to install gems.
-3. Run `rake db:create db:migrate` to create and migrate the database.
+3. Run `rails db:create db:migrate` to create and migrate the database.
 4. Start your Rails server.
-5. The primary gem you'll use for testing this app is `rspec-rails`. You'll also use `factory_girl_rails` to set up and tear down test data and `ffaker` to create realistic fake data.  Examine your `Gemfile` to make sure these gems are included.
+5. The primary gem you'll use for testing this app is `rspec-rails`. You may also use `factory_girl_rails` to set up and tear down test data, `ffaker` to create realistic fake data, and `shoulda-matchers` for extra matchers.  Examine your `Gemfile` to make sure these gems are included.
 5. Run `rspec` in the Terminal. You should see `0 examples, 0 failures`.
 6. Create a new `my-items-intro` branch to start working on, and switch to it.
 
 
 ## What's Already Been Done
 
-* Gems `rspec-rails`, `factory_girl_rails`, and `ffaker` (and a few others) are installed in the Gemfile for the `development` and `test` groups.
+* Gems `rspec-rails`, `factory_girl_rails`, `shoulda-matchers`, and `ffaker` (and a few others) are installed in the Gemfile for the `development` and `test` groups.
 * Terminal command `rails generate rspec:install` has been run, creating the `.rspec` file and the `spec` directory and its contents.
 
 ## Intro: Items TDD
@@ -47,7 +47,7 @@
 
 #### Goal: Test the `items#show` controller action.
 
-* Add a RESTful route to `config/routes.rb` that will trigger the items controller's `show` action.  To follow Rails conventions, make it a named route with the name or "prefix" `item`. Run `rake routes`.
+* Add a RESTful route to `config/routes.rb` that will trigger the items controller's `show` action.  To follow Rails conventions, make it a named route with the name or "prefix" `item`. Run `rails routes`.
 
   <details>
     <summary>click to see route syntax</summary>
