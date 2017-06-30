@@ -7,8 +7,8 @@
 
 ## Getting Started
 
-1. Fork this repo, and clone it into your WDI class folder on your local machine.
-2. Run `bundle install` to install gems.
+1. Fork this repo, and clone it onto your local machine.
+2. Run `bundle update` and `bundle install` to update and install gems.
 3. Run `rails db:create db:migrate` to create and migrate the database.
 4. Start your Rails server.
 5. The primary gem you'll use for testing this app is `rspec-rails`. You may also use `factory_girl_rails` to set up and tear down test data, `ffaker` to create realistic fake data, and `shoulda-matchers` for extra matchers.  Examine your `Gemfile` to make sure these gems are included.
